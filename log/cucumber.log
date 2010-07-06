@@ -1,0 +1,27 @@
+# Logfile created on Tue Jul 06 18:23:41 +0200 2010  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:47:12', 'Spiderman', NULL, '2010-07-06 16:47:12')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:47:12', 'Memento', NULL, '2010-07-06 16:47:12')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:48:33', 'Spiderman', NULL, '2010-07-06 16:48:33')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:48:33', 'Memento', NULL, '2010-07-06 16:48:33')[0m
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:49:27', 'Spiderman', NULL, '2010-07-06 16:49:27')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:49:27', 'Memento', NULL, '2010-07-06 16:49:27')[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 18:49:27) [GET]
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:50:34', 'Spiderman', NULL, '2010-07-06 16:50:34')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:50:34', 'Memento', NULL, '2010-07-06 16:50:34')[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-07-06 18:50:34) [GET]
+Rendering movies/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://www.example.com/movies]
+  [4;36;1mMovie Create (0.3ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:52:36', 'Spiderman', NULL, '2010-07-06 16:52:36')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-07-06 16:52:36', 'Memento', NULL, '2010-07-06 16:52:36')[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-07-06 18:52:36) [GET]
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://www.example.com/movies]
