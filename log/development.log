@@ -54,3 +54,491 @@ Migrating to CreateMovies (20100706164518)
 [0m
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (7.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100706164518')[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (28.2ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "plot" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (11.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (18.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100706164518')[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (48.5ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "plot" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (16.5ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100706164518')[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:15:25) [GET]
+  [4;36;1mMovie Load (1.1ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-03 15:15:31) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: index):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:15:36) [GET]
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:19:45) [GET]
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 46ms (View: 23, DB: 3) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:34:26) [GET]
+  [4;35;1mMovie Load (3.5ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 31ms (View: 9, DB: 4) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-03 15:34:29) [GET]
+Rendering movies/new
+Completed in 114ms (View: 102, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-03 15:34:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "movie"=>{"title"=>"Testar", "plot"=>"Testar"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: index and new):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:37:30) [GET]
+  [4;36;1mMovie Load (6.3ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 23ms (View: 2, DB: 6) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-03 15:37:33) [GET]
+Rendering movies/new
+Completed in 56ms (View: 40, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-03 15:37:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "movie"=>{"title"=>"Test", "plot"=>"Test"}}
+  [4;35;1mMovie Create (4.7ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-03 13:37:37', 'Test', 'Test', '2010-08-03 13:37:37')[0m
+Redirected to http://localhost:3000/movies
+Completed in 87ms (DB: 5) | 302 Found [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:37:37) [GET]
+  [4;36;1mMovie Load (1.2ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 33ms (View: 8, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:38:25) [GET]
+  [4;35;1mMovie Load (0.7ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:38:42) [GET]
+  [4;36;1mMovie Load (1.4ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 43ms (View: 22, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-03 15:38:44) [GET]
+Rendering movies/new
+Completed in 22ms (View: 10, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-03 15:38:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "movie"=>{"title"=>"Test 2", "plot"=>"Testar lite till..."}}
+  [4;35;1mMovie Create (1.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-03 13:38:54', 'Test 2', 'Testar lite till...', '2010-08-03 13:38:54')[0m
+Redirected to http://localhost:3000/movies
+Completed in 95ms (DB: 1) | 302 Found [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:38:54) [GET]
+  [4;36;1mMovie Load (1.9ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 29ms (View: 12, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:41:02) [GET]
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 34ms (View: 19, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:42:40) [GET]
+  [4;36;1mMovie Load (0.8ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+
+ActionView::TemplateError (edit_movie_url failed to generate from {:controller=>"movies", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["movies", :id, "edit"] - are they all satisfied?) on line #9 of app/views/movies/index.html.erb:
+6:         <%=h movie.title%><br />
+7:         <%=h movie.plot%><br />
+8: 
+9:         <%= link_to 'Edit', edit_movie_path %>
+10:     </li>
+11:   <% end -%>
+12: </ul>
+
+    (eval):17:in `edit_movie_path'
+    app/views/movies/index.html.erb:9
+    app/views/movies/index.html.erb:4:in `each'
+    app/views/movies/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (352.2ms)
+Rendered rescues/_request_and_response (5.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:42:53) [GET]
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+
+ActionView::TemplateError (edit_movie_url failed to generate from {:controller=>"movies", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["movies", :id, "edit"] - are they all satisfied?) on line #9 of app/views/movies/index.html.erb:
+6:         <%=h movie.title%><br />
+7:         <%=h movie.plot%><br />
+8: 
+9:         <%= link_to 'Edit', edit_movie_path %>
+10:     </li>
+11:   <% end -%>
+12: </ul>
+
+    (eval):17:in `edit_movie_path'
+    app/views/movies/index.html.erb:9
+    app/views/movies/index.html.erb:4:in `each'
+    app/views/movies/index.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (192.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:43:45) [GET]
+  [4;36;1mMovie Load (1.9ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 46ms (View: 25, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:43:53) [GET]
+  Parameters: {"id"=>"1"}
+
+ActionView::MissingTemplate (Missing template movies/edit.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:45:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering movies/edit
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/movies/1/edit]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:45:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering movies/edit
+Completed in 32ms (View: 5, DB: 1) | 200 OK [http://localhost/movies/2/edit]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:46:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering movies/edit
+ERROR: compiling _run_erb_app47views47movies47edit46html46erb RAISED compile error
+/home/jens/dev/MovieWishList/app/views/movies/edit.html.erb:7: syntax error, unexpected ')'
+...er.concat(( f.label :title,  ).to_s); @output_buffer.concat ...
+                              ^
+/home/jens/dev/MovieWishList/app/views/movies/edit.html.erb:8: syntax error, unexpected ')'
+...oncat(( f.text_field :title, ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47movies47edit46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>\n  Edit Movie - "
+; @output_buffer.concat((h @movie.title ).to_s); @output_buffer.concat "\n</h1>\n\n"
+
+
+;  form_for @movie do |f| 
+@output_buffer.concat "  <p>\n    "
+; @output_buffer.concat(( f.label :title,  ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :title, ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end 
+@output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/jens/dev/MovieWishList/app/views/movies/edit.html.erb:15:in `compile!'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/home/jens/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/jens/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/jens/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/jens/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/home/jens/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/home/jens/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/home/jens/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/home/jens/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/jens/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+/home/jens/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/jens/dev/MovieWishList/app/views/movies/edit.html.erb:7: syntax error, unexpected ')'
+...er.concat(( f.label :title,  ).to_s); @output_buffer.concat ...
+                              ^
+/home/jens/dev/MovieWishList/app/views/movies/edit.html.erb:8: syntax error, unexpected ')'
+...oncat(( f.text_field :title, ).to_s); @output_buffer.concat ...
+                              ^) on line #7 of app/views/movies/edit.html.erb:
+4: 
+5: <% form_for @movie do |f| -%>
+6:   <p>
+7:     <%= f.label :title,  %><br />
+8:     <%= f.text_field :title, %>
+9:   </p>
+10: <% end -%>
+
+    app/views/movies/edit.html.erb:15:in `compile!'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:46:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering movies/edit
+Completed in 36ms (View: 20, DB: 0) | 200 OK [http://localhost/movies/2/edit]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:50:25) [GET]
+  [4;35;1mMovie Load (0.5ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 193ms (View: 5, DB: 1) | 200 OK [http://localhost/movies/]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:50:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.3ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering movies/edit
+Completed in 27ms (View: 18, DB: 0) | 200 OK [http://localhost/movies/1/edit]
+
+
+Processing MoviesController#update (for 127.0.0.1 at 2010-08-03 15:50:33) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "id"=>"1", "movie"=>{"title"=>"Test update", "plot"=>"Testupdate"}}
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+  [4;36;1mMovie Update (0.4ms)[0m   [0;1mUPDATE "movies" SET "updated_at" = '2010-08-03 13:50:33', "title" = 'Test update', "plot" = 'Testupdate' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/movies
+Completed in 37ms (DB: 1) | 302 Found [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:50:33) [GET]
+  [4;35;1mMovie Load (1.6ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 28ms (View: 10, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:51:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering movies/edit
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/movies/1/edit]
+
+
+Processing MoviesController#update (for 127.0.0.1 at 2010-08-03 15:51:35) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "id"=>"1", "movie"=>{"title"=>"Test update", "plot"=>"Testupdate igen"}}
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+  [4;36;1mMovie Update (0.7ms)[0m   [0;1mUPDATE "movies" SET "updated_at" = '2010-08-03 13:51:35', "plot" = 'Testupdate igen' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/movies
+Completed in 63ms (DB: 1) | 302 Found [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:51:35) [GET]
+  [4;35;1mMovie Load (1.2ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-03 15:51:37) [GET]
+Rendering movies/new
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-03 15:51:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"WwXUxWfgAvJ9w7yD/Uap25uUXl8mQUBQeNjFX4xe0a4=", "movie"=>{"title"=>"Skapar en ny ", "plot"=>"Det här är min nya!"}}
+  [4;36;1mMovie Create (0.5ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-03 13:51:46', 'Skapar en ny ', 'Det här är min nya!', '2010-08-03 13:51:46')[0m
+Redirected to http://localhost:3000/movies
+Completed in 33ms (DB: 0) | 302 Found [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-03 15:51:46) [GET]
+  [4;35;1mMovie Load (1.7ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-03 15:51:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMovie Load (1.2ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 3) [0m
+Rendering movies/edit
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/movies/3/edit]

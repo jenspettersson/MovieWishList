@@ -1,4 +1,16 @@
-<% for movie in @movies -%>
-  <%=h movie.title%>
-<% end -%>
+<h1>Movies</h1>
+
+<ul>
+  <% for movie in @movies -%>
+    <li>
+        <%=h movie.title%><br />
+        <%=h movie.plot%><br />
+
+        <%= link_to 'Edit', edit_movie_path(movie) %>
+    </li>
+  <% end -%>
+</ul>
+<p>
+  <%= link_to 'New movie', new_movie_path %>
+</p>
 
