@@ -11,8 +11,10 @@ class MoviesController < ApplicationController
     @movie = Movie.new(params[:movie])
 
     if @movie.save
-      redirect_to movies_path
-
+          flash[:notice] = "New movie added!"
+          redirect_to movies_path
+    else
+      render :action => "new"
     end
   end
 
