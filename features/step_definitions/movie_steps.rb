@@ -8,12 +8,7 @@ Given /^I have no movies$/ do
   Movie.delete_all
 end
 
-#How to add pluralized regexp so I don't need two steps?
-Then /^I should have (\d+) movie$/ do |count|
-  Movie.count.should == count.to_i
-end
-
-Then /^I should have (\d+) movies$/ do |count|
+Then /^I should have (\d+) movies?$/ do |count|
   Movie.count.should == count.to_i
 end
 

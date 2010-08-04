@@ -1347,3 +1347,64 @@ Processing MoviesController#create (for 127.0.0.1 at 2010-08-04 18:59:15) [POST]
 Rendering movies/new
 Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/movies]
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "movies" [0m
+  [4;36;1mMovie Create (0.5ms)[0m   [0;1mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-04 17:05:24', 'Spiderman', NULL, '2010-08-04 17:05:24')[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-04 17:05:24', 'Memento', NULL, '2010-08-04 17:05:24')[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://www.example.com/movies]
+  [4;35;1mMovie Delete all (0.4ms)[0m   [0mDELETE FROM "movies" WHERE 1=1[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 1ms (View: 1, DB: 1) | 200 OK [http://www.example.com/movies]
+REQUESTING PAGE: GET /movies/new with {} and HTTP headers {"HTTP_REFERER"=>"/movies"}
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+Rendering movies/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://www.example.com/movies/new]
+REQUESTING PAGE: POST /movies with {"commit"=>"Create", "movie"=>{"title"=>"Inception", "plot"=>"Dream within a dream"}} and HTTP headers {"HTTP_REFERER"=>"/movies/new"}
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-04 19:05:24) [POST]
+  Parameters: {"commit"=>"Create", "movie"=>{"title"=>"Inception", "plot"=>"Dream within a dream"}}
+  [4;35;1mMovie Create (0.3ms)[0m   [0mINSERT INTO "movies" ("created_at", "title", "plot", "updated_at") VALUES('2010-08-04 17:05:24', 'Inception', 'Dream within a dream', '2010-08-04 17:05:24')[0m
+Redirected to http://www.example.com/movies
+Completed in 3ms (DB: 0) | 302 Found [http://www.example.com/movies]
+REQUESTING PAGE: GET http://www.example.com/movies with {} and HTTP headers {"HTTP_REFERER"=>"/movies"}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/movies]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "movies" [0m
+  [4;36;1mMovie Delete all (0.1ms)[0m   [0;1mDELETE FROM "movies" WHERE 1=1[0m
+REQUESTING PAGE: GET /movies with {} and HTTP headers {}
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/movies]
+REQUESTING PAGE: GET /movies/new with {} and HTTP headers {"HTTP_REFERER"=>"/movies"}
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2010-08-04 19:05:24) [GET]
+Rendering movies/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://www.example.com/movies/new]
+REQUESTING PAGE: POST /movies with {"commit"=>"Create", "movie"=>{"title"=>"", "plot"=>"Dream within a dream"}} and HTTP headers {"HTTP_REFERER"=>"/movies/new"}
+
+
+Processing MoviesController#create (for 127.0.0.1 at 2010-08-04 19:05:24) [POST]
+  Parameters: {"commit"=>"Create", "movie"=>{"title"=>"", "plot"=>"Dream within a dream"}}
+Rendering movies/new
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/movies]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "movies" [0m
