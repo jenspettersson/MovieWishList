@@ -1111,3 +1111,24 @@ Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/movies/1/edit]
 [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
   [4;35;1mSQL (8.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100706164518')[0m
+  [4;36;1mMovie Load (0.9ms)[0m   [0;1mSELECT * FROM "movies" [0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2010-08-04 20:50:47) [GET]
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering movies/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2010-08-04 20:50:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering movies/edit
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/movies/2/edit]
+
+
+Processing MoviesController#update (for 127.0.0.1 at 2010-08-04 20:50:51) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"SpGdhVwwtLWRY6C4JJGEtVIZeGr2Fg8qm6yhtvFMUlw=", "id"=>"2", "movie"=>{"title"=>"", "plot"=>"Testar lite till..."}}
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering movies/edit
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/movies/2]

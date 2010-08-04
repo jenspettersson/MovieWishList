@@ -12,6 +12,9 @@ module NavigationHelpers
       '/'
     when /the list of movies/
       movies_path
+    when /the edit page for movie with id (\d+)/
+          edit_movie_path($1)
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
